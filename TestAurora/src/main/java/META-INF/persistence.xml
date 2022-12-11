@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+
+	version="2.1">
+
+
+
+	<persistence-unit name="Bookstore">
+		<class>vn.iotstar.entity.Category</class>
+	<properties> 
+		
+		<property name="javax.persistence.jdbc.url" value="jdbc:mysql://webdemo-instance-1.ca9yryo3dtvt.us-east-1.rds.amazonaws.com:3306/bookstore" /> 
+		<property name="javax.persistence.jdbc.user" value="admin" /> 
+		<property name="javax.persistence.jdbc.password" value="20110174" /> 
+		<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" /> 
+		<property name="hibernate.show_sql" value="true"/> 
+		<property name="hibernate.format_sql" value="true" />
+		<property name="hibernate.hbm2ddl.auto" value="update" />
+		<property name="hibernate.dialect" value="org.hibernate.dialect.SQLServerDialect"/>
+		 
+	</properties> 
+	</persistence-unit>
+
+	<!-- Kết nối SQL Server with SQL Authentication -->
+
+	<!-- <persistence-unit name="ServletJpa">
+		<class>vn.iotstar.Entity.Category</class>
+
+		<properties>
+
+			<property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://DESKTOP-2BKCL6J\SQLEXPRESS01;integratedSecurity=true;databaseName=ServletJpa" />
+
+			<property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
+		
+            <property name="hibernate.show_sql" value="true" />
+
+            <property name="hibernate.format_sql" value="true" />
+
+            <property name="hibernate.ddl-auto" value="update" />
+            
+            <property name="hibernate.dialect" value="org.hibernate.dialect.SQLServerDialect"/>
+
+           	Kết nối SQL server có mật khẩu
+            <property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://DESKTOP-2BKCL6J\SQLEXPRESS01;databaseName=ServletJpa"/>
+            <property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+            <property name="javax.persistence.jdbc.user" value="sa"/>
+            <property name="javax.persistence.jdbc.password" value="123456"/>
+
+        </properties>
+
+    </persistence-unit> -->
+
+</persistence>
+
+
+	
