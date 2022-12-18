@@ -30,7 +30,7 @@ Các bước chạy đồ án
 -	Kết nối dữ liệu với web và chạy demo local
 •	Sửa trong file persistence.xml 
 •	Thêm dữ liệu thành công
-3.Cài đặt EC2 instances để host web
+3. Cài đặt EC2 instances để host web
 -	Tạo EC2
 •	Trên Services menu  EC2.
 •	Chọn the Launch instance 
@@ -61,23 +61,23 @@ PATH=$JAVA_HOME/bin:$PATH
 •	source .bash_profile
 -	Cài đặt Tomcat cho EC2 instances
 •	Download:
-	wget https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.84/bin/apache-tomcat-8.5.84.tar.gz
-	tar xvzf apache-tomcat-8.5.84.tar.gz
-	rm - r apache-tomcat-8.5.84.tar.gz
+  wget https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.84/bin/apache-tomcat-8.5.84.tar.gz
+  tar xvzf apache-tomcat-8.5.84.tar.gz
+  rm - r apache-tomcat-8.5.84.tar.gz
 •	Cài đặt:
-	cd apache-tomcat-8.5.84/
-	cd bin
-	./startup.sh
-	ps -ef | grep tomcat
-	wget http://localhost:8080
+  cd apache-tomcat-8.5.84/
+  cd bin
+  ./startup.sh
+  ps -ef | grep tomcat
+  wget http://localhost:8080
 •	Cấp quyền truy cập vào manager gui
-	cd conf
-	vi tomcat-users.xml
-	Thêm vào tomcat-users.xml để tạo 1 user: 
-<role rolename="manager-gui"/>
- <user username="admin" password="password" roles="manager-gui,manager-status,manager-script,manager-jmx,admin-gui"/>
-	cd webapps\manager\META-INF\
-	vi context.xlm
+  cd conf
+  vi tomcat-users.xml
+  Thêm vào tomcat-users.xml để tạo 1 user: 
+      <role rolename="manager-gui"/>
+      <user username="admin" password="password" roles="manager-gui,manager-status,manager-script,manager-jmx,admin-gui"/>
+  cd webapps\manager\META-INF\
+  vi context.xlm
 -	Cài đặt MySQL cho EC2 instaces 
 •	sudo yum localinstall https://dev.mysql.com/get/mysql80-community-release-el7-7.noarch.rpm
 •	sudo yum install mysql-community-server
